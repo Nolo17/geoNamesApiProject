@@ -1,0 +1,294 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<link href="./libs/css/style.css" type="text/css" rel="stylesheet">
+
+
+		<title>Relations of Places to eachother </title>
+		<meta name="description" content="Relations -Hierarchy, Children, Neighbours - of Places">
+		<meta name="author" content="Nora Segtrop">
+
+	</head>
+
+	<body>
+		<h1>Relations- Hierarchy, Children, Neighbours- of Places</h1>
+		<div class ="des" id=head>
+			<h3>Api name</h3>
+			<h3>Api description</h3>
+		</div>
+
+		<div class= "des" id="hierarchyDes">
+			<p>1. Hierarchy</p>
+			<p>Returns all Places higher up in the hierarchy of a place name. </p>
+			<div class="select">
+		<select id="selHierarchy">
+			<option value="7287650">Zurich</option>
+			<option value="184745">Nairobi</option>
+			<option value="3553478">Havana</option>
+			<option value="658225">Helsinki</option>
+		</select>
+
+
+		<button id="HierSub">Submit</button>
+			</div>
+
+	</div>
+	<div class= "des" id="childDes">
+		<p>2. Children</p>
+		<p>Returns the children (admin divisions and populated places) for a given place name.</p>
+		<div class="select">
+		<select id="selChildren">
+			<option value="2945356">Brandenburg</option>
+			<option value="4831725">Connecticut</option>
+			<option value="3665361">Amazon</option>
+			<option value="1496153">Siberia</option>
+		</select>
+
+
+		<button id="ChildSub">Submit</button>
+		</div>
+
+
+
+	</div>
+	<div class ="des" id="neighbourDes">
+		<p>3. Neighbours</p>
+		<p>Returns all neighbours for a country.</p>
+		<div class="select">
+		<select id="selNeighbours">
+			<option value="2017370">Russia</option>
+			<option value="2361809">Burkina Faso</option>
+			<option value="3932488">Peru</option>
+			<option value="1655842">Laos</option>
+		</select>
+
+
+		<button id="neighbourSub">Submit</button>
+		</div>
+
+	</div>
+
+	<br> <br>
+
+		<div id="HierResults">
+			<h4>Hierarchy Results: </h4>
+			<table>
+
+				<tr>
+					<td align="right">
+						Planet: 
+					</td>
+					<td id="Planet">
+						
+					</td>
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						Continent: 
+					</td>
+					<td id="Continent">
+						
+					</td>
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						Country: 
+					</td>
+					<td id="Country">
+						
+					</td>
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						Region: 
+					</td>
+					<td id="Region">
+						
+					</td>
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						District: 
+					</td>
+					<td id="District">
+						
+					</td>
+
+				</tr>
+
+
+			</table>
+
+		</div>
+
+		<br> <br>
+
+		<div id="ChildResults">
+			<h4>Children Results:</h4>
+			<table>
+
+				<tr>
+					<td align="right">
+					City / Village 1: 
+					</td>
+					<td id="childPlace1">
+						
+					</td>
+					<td align="right">
+						Population: 
+						</td>
+						<td id="childPop1">
+							
+						</td>
+
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						City / Village 2: 
+					</td>
+					<td id="childPlace2">
+						
+					</td>
+					<td align="right">
+						Population: 
+						</td>
+						<td id="childPop2">
+							
+						</td>
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						City / Village 3: 
+					</td>
+					<td id="childPlace3">
+						
+					</td>
+					<td align="right">
+						Population: 
+						</td>
+						<td id="childPop3">
+							
+						</td>
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						City / Village 4: 
+					</td>
+					<td id="childPlace4">
+						
+					</td>
+					<td align="right">
+						Population: 
+						</td>
+						<td id="childPop4">
+							
+						</td>
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						City / Village 5: 
+					</td>
+					<td id="childPlace5">
+						
+					</td>
+					<td align="right">
+						Population: 
+						</td>
+						<td id="childPop5">
+							
+						</td>
+
+				</tr>
+
+
+			</table>
+
+		</div>
+		
+
+		<br><br>
+
+		<div id="neighbourResults">
+			<h4>Neighbour Countries Results:</h4>
+			<table>
+
+				<tr>
+					<td align="right">
+						Country 1: 
+					</td>
+					<td id="Country1">
+						
+					</td>
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						Country 2: 
+					</td>
+					<td id="Country2">
+						
+					</td>
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						Country 3: 
+					</td>
+					<td id="Country3">
+						
+					</td>
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						Country 4: 
+					</td>
+					<td id="Country4">
+						
+					</td>
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						Country 5: 
+					</td>
+					<td id="Country5">
+						
+					</td>
+
+				</tr>
+
+
+			</table>
+
+		</div>
+
+		<script type="application/javascript" src="libs/js/jquery-2.2.3.min.js"></script>
+		<script type="application/javascript" src="libs/js/script.js"></script>
+
+	</body>
+
+</html>
